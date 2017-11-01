@@ -1,0 +1,160 @@
+@charset "utf-8";
+@import  "util.scss";
+
+/*头部导航栏*/
+.header-wrap {
+    background: #181818;
+    padding:0;
+    .header-inner {
+        overflow: hidden;
+        .header-left,.header-right {
+             float: left;
+        }
+        @include middle;
+        /**header-left**/
+        .header-left {
+            h1,.header-nav {
+                float: left;
+            }
+            h1 {
+                img {
+                    height: 64px;
+                    line-height: 64px;
+                }
+            }
+            
+            /*导航nav*/
+           .header-nav {
+                width:620px;
+                height: 62px;
+                font-size: 16px;
+                line-height: 62px;
+                background: #181818;
+                color: #451b1b;
+                border-bottom: 0;
+                margin-left: 30px;
+                .menu-item {
+                    &:active {
+                        border-bottom:none;
+                    }
+//                  &:hover {
+//                      border-bottom:2px solid #feca2e;
+//                  }
+                    .nav-color {
+                        color:#fff;
+                        padding: 0 10px;
+                    }
+                }
+                .ant-menu-item-selected {
+                    z-index: 2;
+                    .nav-color {
+                        color:#6363ff;
+                    }
+                }
+           }
+        }
+        /**header-right**/
+        .header-right {
+            button {
+                border: 1px solid #ccc;
+                margin-right: 20px;
+                height: 35px;
+                width: 80px;
+                font-size: 16px;
+                color:#fff;
+                &:hover {
+                    color:#6363ff;
+                }
+                
+            }
+            .loginBtn {
+                display: inline-block;
+            }
+            .regBtn {
+                display: inline-block;
+            }
+            
+            .header-search {
+                input {
+                    height:30px;
+                    border-radius: 20px;
+                    background: #333333;
+                    color: #fff;
+                }
+                span {
+                    color:#ccc;
+                }
+            }
+            .loginuser{
+                color: #fff;
+                position: absolute;
+                top: 0;
+                font-size: 16px;
+                display:none;
+                right:20px;
+                .ant-avatar {
+                    width: 46px;
+                    height: 46px;
+                    border-radius: 23px;
+                    margin-top: 4px;
+                    float: left;
+                }
+                .user {
+                    color:#fff;
+                    float: left;
+                    margin-left: 10px;
+                }
+                .outBtn{
+                    float: left;
+                    background: rgb(24, 24, 24);
+                    border: none;
+                    cursor: pointer;
+                    padding: 0 25px;
+                }
+            }
+        }
+    }
+}
+
+  
+    
+/*中间内容区域*/
+.cont-wrap {
+    width:100%;
+    background: #fff;
+}
+.ant-layout {
+    background: #fff;
+}
+
+/*底部footer*/
+.footer {
+    width:100%;
+    background: #181818;
+    margin-top:30px;
+    p {
+        line-height: 35px;
+        color:#999999;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+/**弹出框**/
+.ant-modal {
+    width:330px!important;   /*修改行内样式*/
+    .ant-modal-footer {
+        display: none;
+    }
+    .ant-modal-header {
+        background: #108ee9;
+        .ant-modal-title {
+            font-weight: 600;
+            font-size: 20px;
+            text-align: center;
+            background: #108ee9;
+            color: #fff;
+        }
+    }
+}
+

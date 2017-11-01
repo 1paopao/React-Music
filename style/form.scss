@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.ant-modal-close-x:before {
+    color: #fff;
+}
+
+.login-form {
+    max-width: 300px;
+    .login-form-forgot {
+        float: right;
+    }
+    .login-form-button {
+      width: 100%;
+      margin-top: 22px;
+    }
+}
+.example {
+  text-align: center;
+  border-radius: 4px;
+  display: none;
+}

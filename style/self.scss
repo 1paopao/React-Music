@@ -1,0 +1,44 @@
+@charset "utf-8";
+@import 'util.scss';
+
+.self-cont {
+    @include middle;
+    @include height;
+    padding-top:20px;
+    .self-inner {
+        display: flex;
+        .top {
+            width: 200px;
+            margin-left: 20px;
+            margin-right: 40px;
+            p {
+                img {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                }
+            }
+            h1 {
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+        .bottom {
+            width: 70%;
+            font-size: 14px;
+            color: #4c4c4c;
+            h2 {
+                font-weight: 600;
+                line-height: 60px;
+                border-bottom: 2px solid #ccc;
+            }
+            p {
+                line-height: 35px;
+                border-bottom: 1px dashed #ddd;
+                &:nth-last-child(1) {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+@charset "utf-8";
+@import 'util.scss';
+
+.song-cont {
+    @include middle;
+    @include height;
+    padding-top: 60px;
+    .song-top {
+        .scont {
+            /*左侧*/
+            .scont-left {
+                .sl-top {
+                    text-align: center;
+                    h2 {
+                        font-weight: 600;
+                    }
+                    p {
+                        font-size: 14px;
+                        color: #333;
+                        margin: 18px 0;
+                        span:nth-of-type(1),span:nth-of-type(2) {
+                            color: #010101;
+                        }
+                    }
+                }
+                .sl-bot {
+                    border-top: 1px solid #9c9c9c;
+                    overflow: auto;
+                    height: 500px;
+                    .song-word {
+                        width: 180px;
+                        margin: 10px auto;
+                        font-size: 12px;
+                        color: #333;
+                        line-height: 30px;
+                        p {
+                           line-height: 35px;
+                        }
+                    }
+                }
+            }
+            /*右侧*/
+           .scont-right {
+               .songer {
+                    height: 280px;
+                    padding: 0 50px;
+                    img {
+                        width: 240px;
+                        height: 240px;
+                        border-radius: 50%;
+                    }
+                }
+                .aud {
+                    padding: 0 20px;
+                }
+           }
+        }
+    }
+}

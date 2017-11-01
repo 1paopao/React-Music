@@ -1,0 +1,247 @@
+@charset "utf-8";
+@import 'util.scss';
+
+
+
+.home-cont {
+    /*轮播图*/
+    .swipes {
+        width:100%;
+        .ant-carousel .slick-slide {
+          width:100%;
+          height:600px;
+          text-align: center;
+          background: #364d79;
+          overflow: hidden;
+          h3 {
+              img {
+                  width:100%;
+                  height:600px;
+              }
+          }
+        }
+    }
+    /*轮播下面的图*/
+    .homesec2-wrap {
+        width:100%;
+        height:400px;
+        background: #ebe8e8;
+        .homesec2-inner {
+            @include middle;
+            padding: 40px 0;
+            box-sizing: border-box;
+            overflow: hidden;   /*防止放大后图片影响布局*/
+            span {
+                width:560px;
+                height:320px;
+                float:left;
+                position: relative;
+                transition:all 0.5s;
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 1px 2px 3px #ccc;
+                }
+                
+                img {
+                    width:560px;
+                    height:320px;
+                }
+                
+            }
+            span:nth-child(1) {
+                margin-right:40px;
+            }
+        }
+    }
+    /*歌单*/
+    .homesec3-inner {
+        @include middle;
+        div:nth-child(1) {
+            overflow: hidden;
+            height:50px;
+            line-height: 50px;
+            padding:0 10px;
+            h2{
+                float:left;
+                font-weight: 600;
+            }
+            a{
+                float: right;
+                color:#999;
+            }
+        }
+        .homesec3-detail {
+            height:565px;
+            @include flex;
+            
+            dl {
+                dt {
+                    width:220px;
+                    position: relative;
+                    a {
+                        img {
+                            width:220px;
+                            height:220px; 
+                        }
+                    }
+                    .listen {
+                        position: absolute;
+                        bottom:5px;
+                        left:10px;
+                        color:#fff;
+                        background:url('../pics/icon.png') no-repeat -230px -45px;
+                        padding-left: 20px;
+                    }
+                    .listenbtn {
+                        position: absolute;
+                        bottom:5px;
+                        right:10px;
+                        width: 30px;
+                        height: 30px;
+                        background:url('../pics/icon.png') no-repeat -242px -163px;
+                        display: none;
+                    }
+                    &:hover {
+                        .listenbtn {
+                            display: block;
+                        }
+                    }
+                    
+                }
+                dd {
+                    width:220px;
+                    height:62px;
+                    line-height: 62px;
+                    text-align: center;
+                    a {
+                        color:#333;
+                        font-size: 16px;
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    /*歌手*/
+   .homesec4-inner {
+        @include middle;
+        .tit {
+            overflow: hidden;
+            height:50px;
+            line-height: 50px;
+            padding:0 10px;
+            h2{
+                float:left;
+                font-weight: 600;
+            }
+            a{
+                float: right;
+                color:#999;
+            }
+        }
+        .homesec4-detail {
+            @include flex;
+            height:760px;
+            dl {
+                width:220px;
+                height:360px;
+                position:relative;
+                margin-bottom: 20px;
+                dt {
+                    position:relative;
+                    height:360px;
+                    overflow: hidden;
+                    img {
+                        width:100%;
+                        height:360px; 
+                        transition: all 0.5s;
+                    }
+                    .home-singer {
+                        opacity: 1;
+                        position:absolute;
+                        bottom: 0px;
+                        width: 220px;
+                        background: rgba(0,0,0,.6);
+                        color: #fff;
+                        line-height: 21px;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        height: 100px;
+                        p:nth-child(3) {
+                            span:nth-child(1) {
+                                display: inline-block;
+                                width: 15px;
+                                height: 20px;
+                                background:url('../pics/icon.png') no-repeat -105px 2px;
+                                padding-left: 18px;
+                                margin-right: 50px;
+                            }
+                            span:nth-child(2) {
+                                display: inline-block;
+                                width: 15px;
+                                height: 15px;
+                                background:url('../pics/icon.png') no-repeat -230px 2px;
+                                padding-left: 18px;
+                            }
+                        }
+                    }
+                }
+                dd {
+                    display: none;
+                    width:220px;
+                    height:360px;
+                    position: absolute;
+                    top:0;
+                    background: rgba(0,0,0,.6);
+                    color: #fff;
+                    font-size: 12px;
+                    padding: 10px 20px;
+                    .homesing-tit {
+                        line-height: 30px;
+                        font-size: 15px;
+                        display: flex;
+                        justify-content: space-between;
+                        a {
+                            color: #fff;
+                            font-size: 12px;
+                        }
+                    }
+                    ul {
+                        li {
+                            line-height: 32px;
+                            a {
+                                color: #fff;
+                            }
+                        }
+                    }
+                    button {
+                        width: 100%;
+                        border: 0;
+                        background: rgba(0,0,0,0.4);
+                        line-height: 45px;
+                        border-radius: 20px;
+                        font-size: 14px;
+                        cursor: pointer;
+                        margin-top: 10px;
+                    }
+                }
+                &:hover {
+                        dt {
+                            img {
+                                transform: scale(1.1);
+                            }
+//                          .home-singer {
+//                              opacity: 0;
+//                          }
+                        }
+//                      dd {
+//                         display: block; 
+//                      }
+                    }
+                
+            }
+        }
+        
+   }
+}

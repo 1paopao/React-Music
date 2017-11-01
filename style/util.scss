@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+@import "reset.css";
+
+/*中间公共部分*/
+@mixin middle {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@mixin flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@mixin height {
+    min-height: 600px;
+    height:auto!important;
+    height:600px;
+    overflow: hidden;
+}
+
+body,html {
+    font-family: "微软雅黑";
+    width:100%;
+    height: 100%;
+}
+
